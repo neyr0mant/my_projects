@@ -41,7 +41,7 @@ while True:
                     name_ = name_.replace(str_split, " ")
             s1 = time.time()
             if not google_err:
-                if len(re.findall(r'[а-я, А-Я]', name_)) == 0:
+                if len(re.findall(r'[a-z]', name_)) == 0:
                     try:
                         name_film_translate = Translator().translate(name_, dest="ru").text.lower()
                     except:
